@@ -55,4 +55,5 @@ main {
   word-wrap: break-word;
   line-height: 1em;
   user-select: none;
+  overflow: hidden;
 }
