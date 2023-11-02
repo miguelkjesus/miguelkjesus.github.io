@@ -17,7 +17,9 @@ body {
   position: relative;
   background-color: #101214;
   color: #d0d2d4;
+}
 
+#main {
   display: grid;
   grid-template-columns: 1fr auto;
 }
