@@ -66,13 +66,14 @@ const FACTS = [
   "The citrus soda 7-UP was created in 1929; '7' was selected because the original containers were 7 ounces. 'UP' indicated the direction of the bubbles.",
 ];
 
-function changeText(el, str) {
+function changeText(el, str, fadeTime) {
+  let duration = fadeTime * 0.5;
   el.animate(
     {
       opacity: 0,
     },
     {
-      duration: 400,
+      duration,
       fill: "forwards",
     }
   );
@@ -83,15 +84,15 @@ function changeText(el, str) {
         opacity: 1,
       },
       {
-        duration: 400,
+        duration,
         fill: "forwards",
       }
     );
-  }, 400);
+  }, duration);
 }
 
 function randomFact(el) {
-  changeText(el, FACTS[Math.floor(Math.random() * FACTS.length)]);
+  changeText(el, FACTS[Math.floor(Math.random() * FACTS.length)], 400);
 }
 
 setInterval(() => {
@@ -115,7 +116,8 @@ setTimeout(() => {
   document.getElementById("ellipsis").remove();
   changeText(
     msg,
-    "Hello, you've had this page open for 30 minutes. You should probably clean your tabs more often. Anyway, here's some cool facts!"
+    "Hello, you've had this page open for 30 minutes. You should probably clean your tabs more often. Anyway, here's some cool facts!",
+    400
   );
 
   let fact = document.getElementById("ee-fact");
@@ -144,3 +146,5 @@ window.onmousemove = (ev) => {
     }
   );
 };
+
+document.cookie = "hehehehe=;";
