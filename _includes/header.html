@@ -1,4 +1,21 @@
 <header>
-  <div class="header">miguelkjesus.github.io</div>
-  {% include navigation.html %}
+  <div class="header-left">miguelkjesus.github.io</div>
+  <div class="header-right">
+    <button id="toggle-theme" onclick="toggle_theme()">
+      <img
+        id="toggle-theme-img-light"
+        src="assets/images/light_mode.svg"
+        width="24"
+        height="24"
+        style="display: none"
+      />
+      <img
+        id="toggle-theme-img-dark"
+        src="assets/images/dark_mode.svg"
+        width="24"
+        height="24"
+        style="display: none"
+      />
+    </button>
+  </div>
 </header>
