@@ -3,13 +3,20 @@
   <head>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="/assets/css/styles.css" />
-    {% include scripts.html %}
+    <!-- Styles -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Scripts -->
+    <script src="/assets/js/client.js"></script>
+    <!-- Other -->
     <title>{{ page.title }}</title>
   </head>
   <body>
-    {% include header.html %} {% include navigation.html %} {% include
-    content.html %} {% include footer.html %}
-
-    <script src="assets/js/switch_theme.js"></script>
+    {% include header.html %}
+    <main>{{ content }}</main>
   </body>
 </html>

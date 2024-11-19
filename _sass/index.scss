@@ -1,0 +1,32 @@
+.title {
+  text-align: center;
+  margin: 16em 0;
+
+  &-name {
+    font-size: 8em;
+  }
+
+  &-subheading {
+    margin-top: 0.5em;
+    font-size: 2em;
+  }
+}
+
+.scroll-arrow-container {
+  display: flex;
+  justify-content: stretch;
+  align-items: center;
+
+  > * {
+    flex-grow: 0;
+  }
+}
+
+.bar {
+  flex-grow: 1;
+  margin: 0 5%;
+  height: 5px;
+  border-radius: 9999px;
+
+  background-color: var(--text-color);
+}
